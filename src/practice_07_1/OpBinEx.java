@@ -1,6 +1,7 @@
 package practice_07_1;
 
 public class OpBinEx {
+    // https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html
     public static void main(String[] args) {
         System.out.println(printBinary(1));
         System.out.println(printBinary(2));
