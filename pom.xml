@@ -17,6 +17,7 @@
         <module>practice_07</module>
         <module>practice_08</module>
         <module>practice_09</module>
+        <module>practice_11</module>
     </modules>
     <packaging>pom</packaging>
 
