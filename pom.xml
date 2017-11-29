@@ -18,6 +18,8 @@
         <module>practice_08</module>
         <module>practice_09</module>
         <module>practice_11</module>
+        <module>practice_12</module>
+        <module>practice_12_solution</module>
     </modules>
     <packaging>pom</packaging>
 
