@@ -20,6 +20,8 @@
         <module>practice_11</module>
         <module>practice_12</module>
         <module>practice_12_solution</module>
+        <module>practice_14</module>
+        <module>practice_14s</module>
     </modules>
     <packaging>pom</packaging>
 
