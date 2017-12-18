@@ -22,6 +22,8 @@
         <module>practice_12_solution</module>
         <module>practice_14</module>
         <module>practice_14s</module>
+        <module>practice_15</module>
+        <module>practice_15s</module>
     </modules>
     <packaging>pom</packaging>
 
