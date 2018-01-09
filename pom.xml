@@ -24,6 +24,7 @@
         <module>practice_14s</module>
         <module>practice_15</module>
         <module>practice_15s</module>
+        <module>practice_16</module>
     </modules>
     <packaging>pom</packaging>
 
