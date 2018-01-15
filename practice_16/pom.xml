@@ -55,6 +55,7 @@
             </plugin>
 
         </plugins>
+        <finalName>rs</finalName>
     </build>
 
     <repositories>
