@@ -25,6 +25,7 @@
         <module>practice_15</module>
         <module>practice_15s</module>
         <module>practice_16</module>
+        <module>codewars</module>
     </modules>
     <packaging>pom</packaging>
 
