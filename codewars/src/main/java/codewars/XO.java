@@ -14,7 +14,16 @@ package codewars;
  */
 public class XO {
     public static boolean getXO(String str) {
-        // Good Luck!!
-        return false;
+        int x = 0;
+        int o = 0;
+        String myStr = str.toLowerCase();
+        for (char c : myStr.toCharArray()){
+            if (c == 'x'){
+                x++;
+            } else if (c == 'o'){
+                o++;
+            }
+        }
+        return x == o;
     }
 }
