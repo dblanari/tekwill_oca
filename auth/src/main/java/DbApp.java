@@ -8,7 +8,7 @@ public class DbApp {
     public static void main(String[] args) {
         DbApp app = new DbApp();
         app.createNewTable();
-        app.insert("admin", "admin");
+        app.insert("admin", "admin", 1);
         app.selectAll();
     }
 
@@ -17,7 +17,8 @@ public class DbApp {
         String sql = "CREATE TABLE IF NOT EXISTS user (\n"
                 + "	id integer PRIMARY KEY,\n"
                 + "	name text NOT NULL,\n"
-                + "	password text\n"
+                + "	password text,\n"
+                + "	id_role integer\n"
                 + ");";
 
         try (Connection conn = this.connect();
@@ -40,13 +41,14 @@ public class DbApp {
         return conn;
     }
 
-    public void insert(String name, String passowrd) {
-        String sql = "INSERT INTO user(name,password) VALUES(?,?)";
+    public void insert(String name, String passowrd, int idRole) {
+        String sql = "INSERT INTO user(name,password,id_role) VALUES(?,?,?)";
 
         try (Connection conn = this.connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, name);
             pstmt.setString(2, passowrd);
+            pstmt.setInt(2, idRole);
             pstmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -54,7 +56,7 @@ public class DbApp {
     }
 
     public void selectAll() {
-        String sql = "SELECT id, name, password FROM user";
+        String sql = "SELECT id, name, password, id_role FROM user";
 
         try (Connection conn = this.connect();
              Statement stmt = conn.createStatement();
@@ -64,7 +66,8 @@ public class DbApp {
             while (rs.next()) {
                 System.out.println(rs.getInt("id") + "\t" +
                         rs.getString("name") + "\t" +
-                        rs.getString("password"));
+                        rs.getString("password") + "\t" +
+                        rs.getInt("id_role"));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
