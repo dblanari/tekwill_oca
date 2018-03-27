@@ -8,3 +8,6 @@ target/
 
 # Mac
 .DS_Store
+
+# Java compiled code
+*.class
