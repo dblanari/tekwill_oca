@@ -48,7 +48,7 @@ public class DbApp {
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, name);
             pstmt.setString(2, passowrd);
-            pstmt.setInt(2, idRole);
+            pstmt.setInt(3, idRole);
             pstmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
